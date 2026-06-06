@@ -1,0 +1,251 @@
+2026-06-06 22:12:01,155 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/rca_bot
+2026-06-06 22:12:05,504 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 2.0s, Topology Description: <TopologyDescription id: 6a244dda38a1bcbffd46dd1e, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:12:05,515 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:14:11,721 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/rca_bot
+2026-06-06 22:21:34,991 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/rca_bot
+2026-06-06 22:21:35,779 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a245016a4834913c90d1c59, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:21:35,786 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:26:02,524 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:26:03,259 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a24512298ef23ef3d84670d, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:26:03,261 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:26:13,789 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.162.137:5000
+2026-06-06 22:26:13,791 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-06 22:26:13,921 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 22:26:25,871 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:26:26,573 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a245139ae4f74da022cd803, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:26:26,574 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:26:37,452 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 22:26:37,501 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 22:26:40,396 - __main__ - ERROR - Failed to get dashboard statistics: 'NoneType' object has no attribute 'reports'
+2026-06-06 22:26:40,588 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:26:40] "GET / HTTP/1.1" 200 -
+2026-06-06 22:26:51,648 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\.venv\\Lib\\site-packages\\markupsafe\\__init__.py', reloading
+2026-06-06 22:26:53,311 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 22:27:06,500 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:27:07,108 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a245162b88fbdc965a0fb5a, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:27:07,174 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:27:11,866 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 22:27:11,897 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 22:27:15,840 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\.venv\\Lib\\site-packages\\colorama\\__init__.py', reloading
+2026-06-06 22:27:16,097 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 22:27:20,457 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:27:21,140 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a2451707fa6ccda75aeb416, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:27:21,146 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:27:24,247 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 22:27:24,307 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 22:27:24,633 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\.venv\\Lib\\site-packages\\requests\\__init__.py', reloading
+2026-06-06 22:27:25,340 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 22:27:34,710 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:27:35,254 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a24517efaed4162bdd7bca1, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:27:35,255 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:27:37,199 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 22:27:37,227 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 22:27:39,324 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\.venv\\Lib\\site-packages\\bson\\__init__.py', reloading
+2026-06-06 22:27:39,587 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 22:27:42,664 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:27:43,186 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a2451862ce0a8e2659f1b5c, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:27:43,188 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:27:44,756 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 22:27:44,786 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 22:27:46,520 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\.venv\\Lib\\site-packages\\click\\__init__.py', reloading
+2026-06-06 22:27:47,249 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 22:27:54,438 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:27:55,015 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a245192e4bfda6414ddd653, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:27:55,018 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:27:57,507 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 22:27:57,540 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 22:28:02,901 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\services\\__init__.py', reloading
+2026-06-06 22:28:03,501 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 22:28:06,249 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:28:06,776 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a24519e5bc05c8536eba3bf, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:28:06,778 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:28:08,485 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 22:28:08,507 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 22:29:49,949 - __main__ - ERROR - Failed to get dashboard statistics: 'NoneType' object has no attribute 'reports'
+2026-06-06 22:29:50,055 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:29:50] "GET / HTTP/1.1" 200 -
+2026-06-06 22:29:50,492 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:29:50] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-06-06 22:29:50,508 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:29:50] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-06 22:29:51,282 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:29:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-06 22:30:05,570 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:30:05] "GET /upload-log HTTP/1.1" 200 -
+2026-06-06 22:30:05,613 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:30:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-06 22:30:05,616 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:30:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-06 22:36:16,383 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\app.py', reloading
+2026-06-06 22:36:17,230 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 22:36:22,994 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:36:23,638 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a24538f06ea9203eff58aed, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:36:23,639 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:36:24,826 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 22:36:24,838 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 22:36:37,800 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\app.py', reloading
+2026-06-06 22:36:38,221 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 22:36:40,438 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:36:40,956 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a2453a0409c6f2f39191344, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:36:40,957 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:36:41,706 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 22:36:41,713 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 22:36:58,319 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:36:58,831 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a2453b2e5bd46057984ada9, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:36:58,831 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:36:59,858 - test_logger - INFO - SUCCESS test message
+2026-06-06 22:36:59,859 - test_logger - ERROR - ERROR test message
+2026-06-06 22:37:52,717 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:37:52] "GET /upload-log HTTP/1.1" 200 -
+2026-06-06 22:37:53,250 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:37:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-06 22:37:53,253 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:37:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-06 22:39:52,337 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:39:52] "GET /upload-log HTTP/1.1" 200 -
+2026-06-06 22:39:52,475 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:39:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-06 22:39:52,484 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:39:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-06 22:39:55,141 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:39:55] "GET /upload-log HTTP/1.1" 200 -
+2026-06-06 22:39:55,173 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:39:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-06 22:39:55,199 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:39:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-06 22:40:58,444 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:40:58] "GET /upload-log HTTP/1.1" 200 -
+2026-06-06 22:40:58,499 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:40:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-06 22:40:58,504 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:40:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-06 22:44:14,934 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:44:14] "GET /upload-log HTTP/1.1" 200 -
+2026-06-06 22:44:15,318 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:44:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-06 22:44:15,370 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:44:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-06 22:44:59,913 - services.db_service - ERROR - Error saving log to MongoDB: 'NoneType' object has no attribute 'counters'
+2026-06-06 22:44:59,969 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:44:59] "[32mPOST /upload-log HTTP/1.1[0m" 302 -
+2026-06-06 22:45:00,095 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:45:00] "GET /upload-log HTTP/1.1" 200 -
+2026-06-06 22:45:00,561 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:45:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-06 22:45:00,649 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:45:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-06 22:48:14,964 - services.db_service - ERROR - Error saving log to MongoDB: 'NoneType' object has no attribute 'counters'
+2026-06-06 22:48:14,995 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:48:14] "[32mPOST /upload-log HTTP/1.1[0m" 302 -
+2026-06-06 22:48:15,035 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:48:15] "GET /upload-log HTTP/1.1" 200 -
+2026-06-06 22:48:15,080 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:48:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-06 22:48:15,080 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:48:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-06 22:48:56,124 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\test_imports.py', reloading
+2026-06-06 22:48:56,729 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 22:48:59,930 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:49:00,444 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a2456836db3a6f22c0b4713, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:49:00,444 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:49:01,497 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 22:49:01,507 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 22:49:20,908 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\services\\db_service.py', reloading
+2026-06-06 22:49:21,251 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 22:49:23,931 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:49:24,453 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a24569b3e79972b568dab5f, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:49:24,453 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:49:25,390 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 22:49:25,404 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 22:49:46,838 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\services\\db_service.py', reloading
+2026-06-06 22:49:47,126 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 22:49:49,454 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:49:50,001 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a2456b50346099211fe4217, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:49:50,002 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:49:50,762 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 22:49:50,772 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 22:50:04,000 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\services\\db_service.py', reloading
+2026-06-06 22:50:04,325 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 22:50:06,280 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:50:06,795 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a2456c6d5b61bc5048d097d, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:50:06,796 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:50:07,594 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 22:50:07,606 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 22:50:26,361 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 22:50:26,880 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a2456da28ce88dfb761ccc1, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 22:50:26,881 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 22:50:27,483 - test - ERROR - TEST ERROR
+2026-06-06 22:50:27,485 - test - INFO - SUCCESS TEST
+2026-06-06 22:51:29,970 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:51:29] "GET /upload-log HTTP/1.1" 200 -
+2026-06-06 22:51:49,370 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:51:49] "GET /upload-log HTTP/1.1" 200 -
+2026-06-06 22:51:50,010 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:51:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-06 22:51:50,012 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:51:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-06 22:53:50,273 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:53:50] "GET /upload-log HTTP/1.1" 200 -
+2026-06-06 22:53:50,445 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:53:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-06 22:53:50,457 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:53:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-06 22:54:06,371 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:54:06] "[32mPOST /upload-log HTTP/1.1[0m" 302 -
+2026-06-06 22:54:06,444 - services.github_service - WARNING - GitHub integration not fully configured. Using mock commit data.
+2026-06-06 22:54:10,527 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:54:10] "[32mPOST /upload-log HTTP/1.1[0m" 302 -
+2026-06-06 22:54:10,559 - services.github_service - WARNING - GitHub integration not fully configured. Using mock commit data.
+2026-06-06 22:54:11,607 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:54:11] "[32mPOST /upload-log HTTP/1.1[0m" 302 -
+2026-06-06 22:54:11,657 - services.github_service - WARNING - GitHub integration not fully configured. Using mock commit data.
+2026-06-06 22:54:11,949 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:54:11] "[32mPOST /upload-log HTTP/1.1[0m" 302 -
+2026-06-06 22:54:11,966 - services.github_service - WARNING - GitHub integration not fully configured. Using mock commit data.
+2026-06-06 22:54:12,024 - services.ollama_service - ERROR - Ollama returned error status 500: {"error":"error starting llama-server: llama-server binary not found (checked: C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\build\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows-amd64\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows_amd64\\lib\\ollama\\llama-server.exe). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-06-06 22:54:15,045 - services.ollama_service - ERROR - Ollama returned error status 500: {"error":"error starting llama-server: llama-server binary not found (checked: C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\build\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows-amd64\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows_amd64\\lib\\ollama\\llama-server.exe). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-06-06 22:54:16,719 - services.ollama_service - ERROR - Ollama returned error status 500: {"error":"error starting llama-server: llama-server binary not found (checked: C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\build\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows-amd64\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows_amd64\\lib\\ollama\\llama-server.exe). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-06-06 22:54:16,812 - services.ollama_service - ERROR - Ollama returned error status 500: {"error":"error starting llama-server: llama-server binary not found (checked: C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\build\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows-amd64\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows_amd64\\lib\\ollama\\llama-server.exe). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-06-06 22:54:16,963 - services.ollama_service - ERROR - Ollama returned error status 500: {"error":"error starting llama-server: llama-server binary not found (checked: C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\build\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows-amd64\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows_amd64\\lib\\ollama\\llama-server.exe). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-06-06 22:54:19,255 - services.ollama_service - ERROR - Ollama returned error status 500: {"error":"error starting llama-server: llama-server binary not found (checked: C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\build\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows-amd64\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows_amd64\\lib\\ollama\\llama-server.exe). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-06-06 22:54:21,218 - services.ollama_service - ERROR - Ollama returned error status 500: {"error":"error starting llama-server: llama-server binary not found (checked: C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\build\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows-amd64\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows_amd64\\lib\\ollama\\llama-server.exe). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-06-06 22:54:21,281 - services.ollama_service - ERROR - Ollama returned error status 500: {"error":"error starting llama-server: llama-server binary not found (checked: C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\build\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows-amd64\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows_amd64\\lib\\ollama\\llama-server.exe). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-06-06 22:54:21,368 - services.ollama_service - ERROR - Ollama returned error status 500: {"error":"error starting llama-server: llama-server binary not found (checked: C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\build\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows-amd64\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows_amd64\\lib\\ollama\\llama-server.exe). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-06-06 22:54:21,370 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:54:21] "[32mGET /analyze?log_id=1 HTTP/1.1[0m" 302 -
+2026-06-06 22:54:23,624 - services.ollama_service - ERROR - Ollama returned error status 500: {"error":"error starting llama-server: llama-server binary not found (checked: C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\build\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows-amd64\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows_amd64\\lib\\ollama\\llama-server.exe). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-06-06 22:54:23,625 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:54:23] "[32mGET /analyze?log_id=2 HTTP/1.1[0m" 302 -
+2026-06-06 22:54:25,586 - services.ollama_service - ERROR - Ollama returned error status 500: {"error":"error starting llama-server: llama-server binary not found (checked: C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\build\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows-amd64\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows_amd64\\lib\\ollama\\llama-server.exe). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-06-06 22:54:25,587 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:54:25] "[32mGET /analyze?log_id=3 HTTP/1.1[0m" 302 -
+2026-06-06 22:54:25,772 - services.ollama_service - ERROR - Ollama returned error status 500: {"error":"error starting llama-server: llama-server binary not found (checked: C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\build\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows-amd64\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows_amd64\\lib\\ollama\\llama-server.exe). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
+2026-06-06 22:54:25,775 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:54:25] "[32mGET /analyze?log_id=4 HTTP/1.1[0m" 302 -
+2026-06-06 22:54:25,950 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:54:25] "GET /report/4 HTTP/1.1" 200 -
+2026-06-06 22:54:26,739 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:54:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-06 22:54:26,833 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 22:54:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-06 23:03:46,250 - __main__ - ERROR - Failed to get dashboard statistics: 'list' object has no attribute 'limit'
+2026-06-06 23:03:46,612 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 23:03:46] "GET / HTTP/1.1" 200 -
+2026-06-06 23:03:46,734 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 23:03:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-06 23:03:46,748 - werkzeug - INFO - 127.0.0.1 - - [06/Jun/2026 23:03:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-06 23:20:19,493 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\app.py', reloading
+2026-06-06 23:20:21,044 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 23:20:27,182 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 23:20:27,731 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a245de3ee1c142669432f24, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 23:20:27,732 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 23:20:29,843 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 23:20:29,872 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 23:20:46,523 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\app.py', reloading
+2026-06-06 23:20:47,099 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 23:20:52,595 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 23:20:53,141 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a245dfc0333703ff13c4153, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 23:20:53,144 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 23:20:55,768 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 23:20:55,812 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 23:20:56,059 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\.venv\\Lib\\site-packages\\pymongo\\aggregation.py', reloading
+2026-06-06 23:20:56,520 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 23:21:01,801 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 23:21:02,358 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a245e05d6c86ccd078c1d8c, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 23:21:02,360 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 23:21:04,127 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 23:21:04,153 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 23:29:47,320 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\.venv\\Lib\\site-packages\\blinker\\base.py', reloading
+2026-06-06 23:29:48,616 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 23:29:52,910 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 23:29:53,457 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a246018f8e03761388300b5, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 23:29:53,459 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 23:29:55,852 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 23:29:55,891 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 23:29:56,213 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\.venv\\Lib\\site-packages\\flask\\cli.py', reloading
+2026-06-06 23:29:56,671 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 23:29:59,969 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 23:30:00,497 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a24601f3e205a4b3a589b4c, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 23:30:00,499 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 23:30:02,232 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 23:30:02,252 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 23:30:03,186 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\.venv\\Lib\\site-packages\\pip\\_internal\\build_env.py', reloading
+2026-06-06 23:30:03,620 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 23:30:06,879 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 23:30:07,411 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a246026f694a148fc53f741, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 23:30:07,413 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 23:30:09,348 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 23:30:09,381 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 23:30:09,627 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\.venv\\Lib\\site-packages\\pip\\_vendor\\pkg_resources\\__init__.py', reloading
+2026-06-06 23:30:10,102 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 23:30:13,950 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 23:30:14,492 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a24602d3899bb2dc3dc5afd, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 23:30:14,496 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 23:30:16,638 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 23:30:16,669 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 23:30:16,825 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\.venv\\Lib\\site-packages\\pymongo\\command_cursor.py', reloading
+2026-06-06 23:30:17,279 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 23:30:20,231 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 23:30:20,760 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a246034de33fac574753a46, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 23:30:20,761 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 23:30:22,643 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 23:30:22,665 - werkzeug - INFO -  * Debugger PIN: 789-137-169
+2026-06-06 23:30:23,744 - werkzeug - INFO -  * Detected change in 'G:\\pipeline_rca\\.venv\\Lib\\site-packages\\reportlab\\pdfgen\\canvas.py', reloading
+2026-06-06 23:30:24,137 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-06-06 23:30:27,244 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-06 23:30:27,769 - models - WARNING - Could not connect to live MongoDB server (No servers found yet, Timeout: 0.5s, Topology Description: <TopologyDescription id: 6a24603b528058f63301b0de, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>). Falling back to In-Memory simulation.
+2026-06-06 23:30:27,770 - models - WARNING - Initializing Mock In-Memory Database client.
+2026-06-06 23:30:28,935 - werkzeug - WARNING -  * Debugger is active!
+2026-06-06 23:30:28,945 - werkzeug - INFO -  * Debugger PIN: 789-137-169

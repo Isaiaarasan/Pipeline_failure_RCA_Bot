@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row align-items-center mb-4">
+    <div class="col-12">
+        <h1 class="text-white fw-bold mb-1">Upload Pipeline Logs</h1>
+        <p class="text-secondary mb-0">Upload failed logs to run root-cause analysis or historical successful logs for comparison.</p>
+    </div>
+</div>
+
+<div class="row g-4 justify-content-center">
+    <div class="col-lg-6">
+        <div class="glass-card">
+            <h3 class="text-white h5 mb-4 fw-bold"><i class="bi bi-file-earmark-arrow-up text-primary me-2"></i>Select Log File</h3>
+            
+            <form action="{{ url_for('upload.upload_log') }}" method="POST" enctype="multipart/form-data">
+                <!-- Log Type Selection -->
+                <div class="mb-4">
+                    <label class="form-label text-secondary small fw-semibold">Log File Classification</label>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <input type="radio" class="btn-check" name="log_type" id="log_failure" value="failure" checked>
+                            <label class="btn btn-outline-light w-100 py-3 d-flex flex-column align-items-center gap-2 border-opacity-25" for="log_failure">
+                                <i class="bi bi-x-circle-fill text-danger fs-4"></i>
+                                <span>Failed Log</span>
+                            </label>
+                        </div>
+                        <div class="col-6">
+                            <input type="radio" class="btn-check" name="log_type" id="log_success" value="success">
+                            <label class="btn btn-outline-light w-100 py-3 d-flex flex-column align-items-center gap-2 border-opacity-25" for="log_success">
+                                <i class="bi bi-check-circle-fill text-success fs-4"></i>
+                                <span>Successful Log</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drag & Drop Upload Zone -->
+                <div class="mb-4">
+                    <label class="form-label text-secondary small fw-semibold">Upload Log Document</label>
+                    <div id="upload-zone" class="upload-zone">
+                        <i class="bi bi-cloud-arrow-up-fill upload-icon"></i>
+                        <h5>Drag & Drop your log file here</h5>
+                        <p class="text-secondary small mb-0">Supports .log or .txt files (max 10MB)</p>
+                    </div>
+                    <input type="file" name="log_file" id="log_file" accept=".log,.txt" class="d-none" required>
+                    <!-- File Selected Display -->
+                    <div id="file-selected" class="mt-3 p-3 bg-success bg-opacity-10 border border-success border-opacity-25 rounded d-none">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-file-earmark-check text-success fs-5"></i>
+                            <div>
+                                <p class="text-success fw-semibold mb-1">File Selected</p>
+                                <p class="text-secondary small mb-0" id="file-name"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <button type="submit" id="submit-btn" class="btn btn-primary w-100 py-2.5 fw-semibold" disabled>
+                    <i class="bi bi-cloud-arrow-up me-1"></i> Upload and Register Log
+                </button>
+                <small id="file-required-hint" class="text-warning d-block mt-2 text-center">Select a file to enable upload</small>
+            </form>
+        </div>
+    </div>
+
+    <!-- Upload Instructions and Tips -->
+    <div class="col-lg-5">
+        <div class="glass-card h-100">
+            <h3 class="text-white h5 mb-3 fw-bold"><i class="bi bi-lightbulb text-primary me-2"></i>Analysis Recommendations</h3>
+            
+            <div class="d-flex flex-column gap-3 text-secondary small mt-3">
+                <div class="d-flex gap-3 align-items-start">
+                    <div class="text-primary fs-4"><i class="bi bi-1-circle"></i></div>
+                    <div>
+                        <h6 class="text-white fw-bold mb-1">Step 1: Upload a Successful Log</h6>
+                        <p>Providing the most recent successful pipeline execution log helps the AI RCA Generator isolate environmental variances and configuration deltas.</p>
+                    </div>
+                </div>
+                
+                <hr class="border-secondary border-opacity-25 my-1">
+                
+                <div class="d-flex gap-3 align-items-start">
+                    <div class="text-primary fs-4"><i class="bi bi-2-circle"></i></div>
+                    <div>
+                        <h6 class="text-white fw-bold mb-1">Step 2: Upload the Failed Log</h6>
+                        <p>Select "Failed Log", drop the execution log containing stack traces, database exceptions, or output dumps, and upload it.</p>
+                    </div>
+                </div>
+
+                <hr class="border-secondary border-opacity-25 my-1">
+
+                <div class="d-flex gap-3 align-items-start">
+                    <div class="text-primary fs-4"><i class="bi bi-3-circle"></i></div>
+                    <div>
+                        <h6 class="text-white fw-bold mb-1">Step 3: Trigger the Analysis Loop</h6>
+                        <p>Once both files are registered, our multi-agent model loop fetches GitHub commits and automatically identifies which changes introduced the bug.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const fileInput = document.getElementById('log_file');
+    const uploadZone = document.getElementById('upload-zone');
+    const fileSelectedDiv = document.getElementById('file-selected');
+    const fileNameSpan = document.getElementById('file-name');
+    const submitBtn = document.getElementById('submit-btn');
+    const fileRequiredHint = document.getElementById('file-required-hint');
+    const form = document.querySelector('form');
+
+    // Update button state
+    function updateButtonState() {
+        if (fileInput.files.length > 0) {
+            const file = fileInput.files[0];
+            fileNameSpan.textContent = `${file.name} - ${(file.size / 1024).toFixed(2)} KB`;
+            fileSelectedDiv.classList.remove('d-none');
+            submitBtn.disabled = false;
+            submitBtn.classList.add('btn-success');
+            submitBtn.classList.remove('btn-primary', 'disabled');
+            submitBtn.innerHTML = '<i class="bi bi-check-circle me-1"></i> Submit and Analyze';
+            fileRequiredHint.classList.add('d-none');
+        } else {
+            fileSelectedDiv.classList.add('d-none');
+            submitBtn.disabled = true;
+            submitBtn.classList.remove('btn-success');
+            submitBtn.classList.add('btn-primary', 'disabled');
+            submitBtn.innerHTML = '<i class="bi bi-cloud-arrow-up me-1"></i> Upload and Register Log';
+            fileRequiredHint.classList.remove('d-none');
+        }
+    }
+
+    // Monitor file input changes
+    fileInput.addEventListener('change', updateButtonState);
+
+    // Click upload zone to trigger file input
+    uploadZone.addEventListener('click', function() {
+        fileInput.click();
+    });
+
+    // Drag and drop functionality
+    uploadZone.addEventListener('dragover', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        uploadZone.style.backgroundColor = 'rgba(13, 110, 253, 0.1)';
+        uploadZone.style.borderColor = '#0d6efd';
+    });
+
+    uploadZone.addEventListener('dragleave', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        uploadZone.style.backgroundColor = '';
+        uploadZone.style.borderColor = '';
+    });
+
+    uploadZone.addEventListener('drop', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        uploadZone.style.backgroundColor = '';
+        uploadZone.style.borderColor = '';
+        
+        const files = e.dataTransfer.files;
+        if (files && files.length > 0) {
+            // Create a DataTransfer object to properly set files
+            const dataTransfer = new DataTransfer();
+            dataTransfer.items.add(files[0]);
+            fileInput.files = dataTransfer.files;
+            // Trigger change event
+            fileInput.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+    });
+
+    // Form submission handler
+    form.addEventListener('submit', function(e) {
+        if (!fileInput.files || fileInput.files.length === 0) {
+            e.preventDefault();
+            alert('Please select a log file before submitting.');
+            return false;
+        }
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="bi bi-hourglass-split me-1"></i> Uploading...';
+        return true;
+    });
+});
+</script>
+{% endblock %}
