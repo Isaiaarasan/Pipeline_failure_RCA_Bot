@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Page Heading -->
+<div class="row align-items-center mb-4">
+    <div class="col-md-8">
+        <h1 class="text-white fw-bold mb-1">Incident RCA Command Center</h1>
+        <p class="text-secondary mb-0">Monitor pipeline failures, analyze commit history, and generate AI resolution paths.</p>
+    </div>
+    <div class="col-md-4 text-md-end mt-3 mt-md-0">
+        <a href="{{ url_for('upload.upload_log') }}" class="btn btn-primary px-4 py-2">
+            <i class="bi bi-upload me-1"></i> Upload Pipeline Log
+        </a>
+    </div>
+</div>
+
+<!-- Stats Indicators Row -->
+<div class="row g-4 mb-4">
+    <div class="col-md-3">
+        <div class="glass-card stat-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="stat-label">Total Reports Generated</div>
+                    <div class="stat-number">{{ stats.total_reports }}</div>
+                </div>
+                <div class="stat-icon"><i class="bi bi-file-earmark-bar-graph"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="glass-card stat-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="stat-label">Total Uploaded Logs</div>
+                    <div class="stat-number">{{ stats.total_logs }}</div>
+                </div>
+                <div class="stat-icon"><i class="bi bi-database-check"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="glass-card stat-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="stat-label">Average AI Confidence</div>
+                    <div class="stat-number">{{ stats.avg_confidence }}</div>
+                </div>
+                <div class="stat-icon"><i class="bi bi-shield-check"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="glass-card stat-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="stat-label">Unresolved Critical / High</div>
+                    <div class="stat-number">{{ stats.severity_counts.Critical + stats.severity_counts.High }}</div>
+                </div>
+                <div class="stat-icon text-danger"><i class="bi bi-exclamation-octagon-fill"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Section -->
+<div class="row g-4">
+    <!-- Quick Actions and System status -->
+    <div class="col-lg-4">
+        <!-- Run RCA Agent loop -->
+        <div class="glass-card mb-4">
+            <h3 class="text-white h5 mb-3 fw-bold"><i class="bi bi-robot text-primary me-2"></i>Trigger Agent Loop</h3>
+            <p class="text-secondary small">Analyze the latest failure log using our multi-agent model loop. The log is correlated with recent GitHub diffs and historical success logs.</p>
+            
+            {% if stats.total_logs > 0 %}
+                <a href="{{ url_for('analysis.analyze') }}" id="start-analysis-btn" class="btn btn-outline-primary w-100 py-2.5">
+                    <i class="bi bi-play-circle-fill me-1"></i> Start Incident Analysis
+                </a>
+            {% else %}
+                <div class="alert alert-warning border-0 small text-white" style="background: rgba(255,193,7,0.1);">
+                    <i class="bi bi-info-circle me-1"></i> Please upload a pipeline failure log before running the analysis loop.
+                </div>
+                <a href="{{ url_for('upload.upload_log') }}" class="btn btn-outline-primary w-100 py-2.5 disabled">
+                    <i class="bi bi-play-circle-fill me-1"></i> Start Incident Analysis
+                </a>
+            {% endif %}
+        </div>
+        
+        <!-- Severity Breakdown summary -->
+        <div class="glass-card">
+            <h3 class="text-white h5 mb-3 fw-bold"><i class="bi bi-pie-chart text-primary me-2"></i>Severity Distribution</h3>
+            
+            {% set total = stats.severity_counts.Critical + stats.severity_counts.High + stats.severity_counts.Medium + stats.severity_counts.Low %}
+            {% if total > 0 %}
+                <div class="d-flex flex-column gap-3">
+                    {% for key, val in stats.severity_counts.items() %}
+                        {% set pct = (val / total * 100)|round|int %}
+                        <div>
+                            <div class="d-flex justify-content-between text-secondary small mb-1">
+                                <span>{{ key }}</span>
+                                <span class="text-white fw-bold">{{ val }} ({{ pct }}%)</span>
+                            </div>
+                            <div class="progress" style="height: 6px; background: rgba(255,255,255,0.05);">
+                                <div class="progress-bar {% if key == 'Critical' %}bg-danger{% elif key == 'High' %}bg-warning{% elif key == 'Medium' %}bg-info{% else %}bg-success{% endif %}" role="progressbar" style="width: {{ pct }}%"></div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="text-center py-4 text-secondary small">
+                    <i class="bi bi-bar-chart-line d-block fs-3 mb-2 opacity-50"></i> No reports generated yet.
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    
+    <!-- Recent Incidents and Reports -->
+    <div class="col-lg-8">
+        <div class="glass-card h-100">
+            <h3 class="text-white h5 mb-3 fw-bold"><i class="bi bi-clock-history text-primary me-2"></i>Recent Incident Reports</h3>
+            
+            {% if stats.recent_reports %}
+                <div class="table-responsive">
+                    <table class="table table-dark table-hover align-middle mb-0" style="--bs-table-bg: transparent; --bs-table-hover-bg: rgba(255,255,255,0.02); --bs-table-border-color: rgba(255,255,255,0.05);">
+                        <thead>
+                            <tr class="text-secondary small">
+                                <th>Incident ID</th>
+                                <th>Failure Summary</th>
+                                <th>Severity</th>
+                                <th>Confidence</th>
+                                <th class="text-end">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for report in stats.recent_reports %}
+                            <tr>
+                                <td>
+                                    <span class="text-primary font-mono fw-bold">RCA-{{ "%04d" | format(report.id) }}</span>
+                                </td>
+                                <td>
+                                    <div class="text-white text-truncate fw-medium" style="max-width: 250px;">{{ report.failure_summary }}</div>
+                                    <div class="text-secondary small">{{ report.created_at.strftime('%Y-%m-%d %H:%M') }}</div>
+                                </td>
+                                <td>
+                                    <span class="badge-severity {% if report.severity.lower() == 'critical' %}badge-critical{% elif report.severity.lower() == 'high' %}badge-high{% elif report.severity.lower() == 'medium' %}badge-medium{% else %}badge-low{% endif %}">
+                                        {{ report.severity }}
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="fw-semibold">{{ report.confidence_score }}</span>
+                                </td>
+                                <td class="text-end">
+                                    <div class="btn-group">
+                                        <a href="{{ url_for('report.view_report', report_id=report.id) }}" class="btn btn-sm btn-outline-light" title="View Details">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                        <a href="{{ url_for('report.export_pdf', report_id=report.id) }}" class="btn btn-sm btn-outline-primary" title="Export PDF">
+                                            <i class="bi bi-file-earmark-pdf"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="text-center py-5 text-secondary">
+                    <i class="bi bi-file-earmark-excel-fill d-block fs-1 mb-3 opacity-50"></i>
+                    <h5>No Incident Reports Found</h5>
+                    <p class="small">Upload a failed log file and hit "Start Incident Analysis" to begin investigation.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Agent Analysis Loading Overlay -->
+<div id="analysis-loading-overlay" class="d-none" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(15, 23, 42, 0.9); z-index: 1050; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(8px);">
+    <div class="text-center" style="max-width: 480px; padding: 30px;">
+        <div class="spinner-pulse">
+            <i class="bi bi-robot text-primary fs-3"></i>
+        </div>
+        <h3 class="text-white fw-bold mb-2">Executing AI Agent Loop</h3>
+        <p class="text-secondary small mb-4" id="loading-status-text">Agent 1: Fetching failed pipeline logs...</p>
+        
+        <div class="progress mb-3" style="height: 4px; background: rgba(255,255,255,0.05);">
+            <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%"></div>
+        </div>
+        <p class="text-secondary small italic">Please stand by. Core reasoning models correlate failure points with code diffs...</p>
+    </div>
+</div>
+{% endblock %}

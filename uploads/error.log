@@ -1,0 +1,7 @@
+2026-06-06 22:36:59,859 - test_logger - ERROR - ERROR test message
+2026-06-06 22:39:30 - test_error - ERROR - ERROR: Failed to connect to downstream service
+2026-06-06 22:39:30 - test_error - ERROR - ERROR: Unexpected response format in API payload
+2026-06-06 22:39:30 - test_error - ERROR - ERROR: Database transaction aborted due to timeout
+2026-06-06 22:44:59,913 - services.db_service - ERROR - Error saving log to MongoDB: 'NoneType' object has no attribute 'counters'
+2026-06-06 22:48:14,964 - services.db_service - ERROR - Error saving log to MongoDB: 'NoneType' object has no attribute 'counters'
+2026-06-06 22:50:27,483 - test - ERROR - TEST ERROR

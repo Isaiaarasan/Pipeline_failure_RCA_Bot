@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row align-items-center mb-4">
+    <div class="col-12">
+        <h1 class="text-white fw-bold mb-1">GitHub Integration Explorer</h1>
+        <p class="text-secondary mb-0">Explore commit feeds and line-by-line diff patches from your active repository branch.</p>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Commits Feed -->
+    <div class="col-lg-8">
+        <div class="glass-card">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="text-white h5 mb-0 fw-bold">
+                    <i class="bi bi-git text-primary me-2"></i>Recent Commits Feed
+                </h3>
+                <span class="badge {% if is_live %}bg-success-subtle text-success border border-success-subtle{% else %}bg-warning-subtle text-warning border border-warning-subtle{% endif %} px-2.5 py-1.5 small">
+                    {% if is_live %}<i class="bi bi-cloud-check-fill me-1"></i>Live Repository API{% else %}<i class="bi bi-cpu-fill me-1"></i>Simulation Offline Mode{% endif %}
+                </span>
+            </div>
+
+            {% if commits %}
+                <div class="d-flex flex-column gap-4">
+                    {% for commit in commits %}
+                        <div class="p-3.5 rounded" style="background: rgba(255,255,255,0.015); border: 1px solid var(--border-color);">
+                            <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                                <div>
+                                    <h5 class="text-white h6 mb-1 fw-bold">{{ commit.message }}</h5>
+                                    <p class="text-secondary small mb-0">
+                                        Authored by <span class="text-white fw-semibold">{{ commit.author }}</span> 
+                                        &bull; {{ commit.date }}
+                                    </p>
+                                </div>
+                                <span class="font-mono text-primary small fw-semibold bg-primary bg-opacity-10 border border-primary border-opacity-25 px-2 py-1 rounded">
+                                    {{ commit.commit_id[:8] }}
+                                </span>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="text-secondary small mb-1.5 fw-semibold">Modified Files:</div>
+                                <div class="d-flex flex-wrap gap-1">
+                                    {% for file in commit.changed_files %}
+                                        <span class="badge bg-secondary font-mono small border border-secondary border-opacity-50">{{ file }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            {% if commit.diff_summary %}
+                                <div class="text-secondary small fw-semibold mb-1">Patch Details:</div>
+                                <div class="diff-container mb-0">
+                                    <div class="diff-header font-mono">
+                                        <i class="bi bi-file-earmark-diff me-1"></i> Git Diff Line Changes
+                                    </div>
+                                    <pre class="diff-body raw-diff text-white mb-0">{{ commit.diff_summary }}</pre>
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="text-center py-5 text-secondary">
+                    <i class="bi bi-slash-circle d-block fs-1 mb-3 opacity-50"></i>
+                    <h5>No Commits Available</h5>
+                    <p class="small">Could not load commit feed. Check git repo access levels.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Repository Settings Context -->
+    <div class="col-lg-4">
+        <div class="glass-card mb-4">
+            <h3 class="text-white h5 mb-3 fw-bold"><i class="bi bi-gear-fill text-primary me-2"></i>Active Target</h3>
+            <div class="p-3.5 rounded mb-3" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color);">
+                <div class="text-secondary small">Repository Target</div>
+                <div class="text-white fw-bold font-mono text-truncate mt-0.5">{{ repo }}</div>
+            </div>
+            
+            <p class="text-secondary small mb-0">
+                To connect the RCA Bot to a private or public GitHub repository, configure `GITHUB_TOKEN` and `GITHUB_REPO` variables inside your `.env` configuration file.
+            </p>
+        </div>
+
+        <div class="glass-card">
+            <h3 class="text-white h5 mb-3 fw-bold"><i class="bi bi-link-45deg text-primary me-2"></i>Integration Scope</h3>
+            <div class="d-flex flex-column gap-2 text-secondary small">
+                <div class="d-flex gap-2">
+                    <i class="bi bi-shield-check text-success"></i>
+                    <span>Read access to public & private repos commits</span>
+                </div>
+                <div class="d-flex gap-2">
+                    <i class="bi bi-shield-check text-success"></i>
+                    <span>Identify dictionary key adjustments and syntax additions</span>
+                </div>
+                <div class="d-flex gap-2">
+                    <i class="bi bi-shield-check text-success"></i>
+                    <span>Isolate package changes in setup configurations</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

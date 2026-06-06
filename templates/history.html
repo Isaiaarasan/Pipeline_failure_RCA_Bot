@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row align-items-center mb-4">
+    <div class="col-md-8">
+        <h1 class="text-white fw-bold mb-1">RCA Analysis History</h1>
+        <p class="text-secondary mb-0">Browse and search all historical incident investigations and resolution paths.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="glass-card">
+            <!-- Search & Filter inputs -->
+            <div class="row g-3 mb-4 align-items-center justify-content-between">
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-text bg-transparent border-secondary border-opacity-25 text-secondary"><i class="bi bi-search"></i></span>
+                        <input type="text" id="search-input" class="form-control bg-transparent border-secondary border-opacity-25 text-white" placeholder="Search by error keyword...">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <select id="severity-filter" class="form-select bg-transparent border-secondary border-opacity-25 text-white" style="background-color: var(--bg-slate) !important;">
+                        <option value="all" class="text-dark">All Severities</option>
+                        <option value="critical" class="text-dark">Critical</option>
+                        <option value="high" class="text-dark">High</option>
+                        <option value="medium" class="text-dark">Medium</option>
+                        <option value="low" class="text-dark">Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Table of Historical Reports -->
+            {% if reports %}
+                <div class="table-responsive">
+                    <table class="table table-dark table-hover align-middle mb-0" id="history-table" style="--bs-table-bg: transparent; --bs-table-hover-bg: rgba(255,255,255,0.02); --bs-table-border-color: rgba(255,255,255,0.05);">
+                        <thead>
+                            <tr class="text-secondary small">
+                                <th>Incident ID</th>
+                                <th>Incident Timestamp</th>
+                                <th>Failure Summary</th>
+                                <th>Severity</th>
+                                <th>Confidence</th>
+                                <th class="text-end">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for report in reports %}
+                            <tr class="history-row" data-severity="{{ report.severity.lower() }}" data-summary="{{ report.failure_summary.lower() }} {{ report.root_cause.lower() }}">
+                                <td>
+                                    <span class="text-primary font-mono fw-bold">RCA-{{ "%04d" | format(report.id) }}</span>
+                                </td>
+                                <td>
+                                    <span class="text-white">{{ report.created_at.strftime('%Y-%m-%d') }}</span>
+                                    <div class="text-secondary small">{{ report.created_at.strftime('%H:%M:%S UTC') }}</div>
+                                </td>
+                                <td>
+                                    <div class="text-white fw-semibold mb-0.5 text-truncate" style="max-width: 380px;">{{ report.failure_summary }}</div>
+                                    <div class="text-secondary small text-truncate" style="max-width: 380px;">{{ report.root_cause }}</div>
+                                </td>
+                                <td>
+                                    <span class="badge-severity {% if report.severity.lower() == 'critical' %}badge-critical{% elif report.severity.lower() == 'high' %}badge-high{% elif report.severity.lower() == 'medium' %}badge-medium{% else %}badge-low{% endif %}">
+                                        {{ report.severity }}
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="fw-semibold text-white">{{ report.confidence_score }}</span>
+                                </td>
+                                <td class="text-end">
+                                    <div class="btn-group">
+                                        <a href="{{ url_for('report.view_report', report_id=report.id) }}" class="btn btn-sm btn-outline-light" title="View Detailed Analysis">
+                                            <i class="bi bi-eye-fill"></i> View Report
+                                        </a>
+                                        <a href="{{ url_for('report.export_pdf', report_id=report.id) }}" class="btn btn-sm btn-outline-primary" title="Export PDF">
+                                            <i class="bi bi-file-earmark-pdf-fill"></i> PDF
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="text-center py-5 text-secondary">
+                    <i class="bi bi-file-earmark-lock-fill d-block fs-1 mb-3 opacity-50"></i>
+                    <h5>No Analysis History Found</h5>
+                    <p class="small">Upload logs and run the analysis loop to compile incident records.</p>
+                    <a href="{{ url_for('upload.upload_log') }}" class="btn btn-primary btn-sm mt-2">Upload First Log</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const severityFilter = document.getElementById('severity-filter');
+    const rows = document.querySelectorAll('.history-row');
+
+    function filterTable() {
+        const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        const severity = severityFilter ? severityFilter.value.toLowerCase() : 'all';
+
+        rows.forEach(row => {
+            const rowSeverity = row.getAttribute('data-severity');
+            const rowSummary = row.getAttribute('data-summary');
+
+            const matchesSearch = rowSummary.includes(query);
+            const matchesSeverity = (severity === 'all' || rowSeverity === severity);
+
+            if (matchesSearch && matchesSeverity) {
+                row.classList.remove('d-none');
+            } else {
+                row.classList.add('d-none');
+            }
+        });
+    }
+
+    if (searchInput) searchInput.addEventListener('input', filterTable);
+    if (severityFilter) severityFilter.addEventListener('change', filterTable);
+});
+</script>
+{% endblock %}
