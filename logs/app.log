@@ -1059,3 +1059,62 @@
 2026-06-07 13:01:51,457 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2026 13:01:51] "GET /github-analysis HTTP/1.1" 200 -
 2026-06-07 13:01:51,936 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2026 13:01:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2026-06-07 13:01:51,937 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2026 13:01:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-11 09:28:35,418 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-11 09:29:07,965 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/rca_bot
+2026-06-11 09:29:08,004 - models - INFO - Successfully connected to live MongoDB server.
+2026-06-11 09:30:04,404 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/rca_bot
+2026-06-11 09:30:04,428 - models - INFO - Successfully connected to live MongoDB server.
+2026-06-11 09:30:05,197 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.44:5000
+2026-06-11 09:30:05,198 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-11 09:30:05,201 - werkzeug - INFO -  * Restarting with stat
+2026-06-11 09:30:06,282 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/rca_bot
+2026-06-11 09:30:06,299 - models - INFO - Successfully connected to live MongoDB server.
+2026-06-11 09:30:06,851 - werkzeug - WARNING -  * Debugger is active!
+2026-06-11 09:30:06,856 - werkzeug - INFO -  * Debugger PIN: 100-679-477
+2026-06-11 09:30:32,587 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:32] "GET / HTTP/1.1" 200 -
+2026-06-11 09:30:32,795 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:32] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-11 09:30:32,871 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:32] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-06-11 09:30:33,699 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-11 09:30:39,232 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:39] "GET /history HTTP/1.1" 200 -
+2026-06-11 09:30:39,523 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-11 09:30:39,616 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-11 09:30:42,126 - app - INFO - DEBUG - USING TOKEN: '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'
+2026-06-11 09:30:42,127 - app - INFO - DEBUG - USING REPO: 'Gopikashree23ECE035/Pipeline_failure_RCA_Bot'
+2026-06-11 09:30:43,379 - services.github_service - ERROR - Failed to fetch commits from GitHub (Status 401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+2026-06-11 09:30:43,380 - services.github_service - WARNING - Using mock commits fallback due to API error.
+2026-06-11 09:30:43,414 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:43] "GET /github-analysis HTTP/1.1" 200 -
+2026-06-11 09:30:43,513 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-11 09:30:43,513 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-11 09:30:51,395 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:51] "GET / HTTP/1.1" 200 -
+2026-06-11 09:30:51,509 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-11 09:30:51,668 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-11 09:30:52,702 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:52] "GET /upload-log HTTP/1.1" 200 -
+2026-06-11 09:30:52,998 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-11 09:30:53,095 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-11 09:30:54,099 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:54] "GET /history HTTP/1.1" 200 -
+2026-06-11 09:30:54,256 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-11 09:30:54,351 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-11 09:30:55,064 - app - INFO - DEBUG - USING TOKEN: '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'
+2026-06-11 09:30:55,065 - app - INFO - DEBUG - USING REPO: 'Gopikashree23ECE035/Pipeline_failure_RCA_Bot'
+2026-06-11 09:30:56,236 - services.github_service - ERROR - Failed to fetch commits from GitHub (Status 401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+2026-06-11 09:30:56,237 - services.github_service - WARNING - Using mock commits fallback due to API error.
+2026-06-11 09:30:56,249 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:56] "GET /github-analysis HTTP/1.1" 200 -
+2026-06-11 09:30:56,318 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-11 09:30:56,633 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2026 09:30:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-11 09:31:48,887 - werkzeug - INFO -  * Detected change in 'I:\\github\\Pipeline_failure_RCA_Bot\\services\\ollama_service.py', reloading
+2026-06-11 09:31:49,708 - werkzeug - INFO -  * Restarting with stat
+2026-06-11 09:31:52,497 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-11 09:32:40,646 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/
+2026-06-11 09:48:19,284 - models - INFO - Connecting to MongoDB at: mongodb://localhost:27017/rca_bot
+2026-06-11 09:48:19,297 - models - INFO - Successfully connected to live MongoDB server.

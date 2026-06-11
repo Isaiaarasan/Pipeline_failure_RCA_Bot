@@ -290,3 +290,13 @@
 2026-06-07 14:50:49,138 - services.ollama_service - ERROR - Ollama returned error status 500: {"error":"error starting llama-server: llama-server binary not found (checked: C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\build\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows-amd64\\lib\\ollama\\llama-server.exe, C:\\Users\\GOPIKA SHREE K\\AppData\\Local\\Programs\\Ollama\\dist\\windows_amd64\\lib\\ollama\\llama-server.exe). Run 'cmake -S llama/server --preset cpu \u0026\u0026 cmake --build --preset cpu' first "}
 >>>>>>> Stashed changes
 >>>>>>> c5bb7b4bbe81815e9526fdcb561fb540488aae2f
+2026-06-11 09:30:43,379 - services.github_service - ERROR - Failed to fetch commits from GitHub (Status 401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}
+2026-06-11 09:30:56,236 - services.github_service - ERROR - Failed to fetch commits from GitHub (Status 401): {
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "401"
+}

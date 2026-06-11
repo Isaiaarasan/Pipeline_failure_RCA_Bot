@@ -193,7 +193,7 @@ class OllamaService:
 
         else:
             # AGENT 3 fallback: RCA GENERATOR
-<<<<<<< Updated upstream
+
             if "keyerror" in user_prompt_lower or "timestamp" in user_prompt_lower:
                 return {
                     "root_cause": "The pipeline failed due to a KeyError exception: 'timestamp' in pipeline/handler.py at line 15. This was directly introduced in commit 8c7a2b9f3d1e4e5f6a7b8c9d0e1f2a3b4c5d6e7f ('Refactor dictionary response keys in ETL payload formatting') by dev-engineer-lead. The commit changed the payload mapping keys to use 'ts' instead of 'timestamp', but downstream database loader script still expects the 'timestamp' key, leading to a crash when it tries to extract 'timestamp' from the payload dictionary.",
@@ -218,7 +218,7 @@ class OllamaService:
                     "recommendation": "Examine the worker memory profiles and database execution times. Increase execution timeout settings in pipeline configuration.",
                     "retry_steps": "1. Check server metrics for out of memory (OOM) alerts.\\n2. Clear pipeline temp locks.\\n3. Restart pipeline runner."
                 }
-=======
+
             severity, confidence_score = self._estimate_fallback_severity_confidence(user_prompt_lower)
 
             if severity == "Critical":
@@ -249,4 +249,4 @@ class OllamaService:
                 "recommendation": "Investigate the reported pipeline condition and apply an appropriate fix based on the log context.",
                 "retry_steps": "1. Review the pipeline output and configuration.\n2. Adjust any environment or connection settings.\n3. Re-run the pipeline after correcting the issue."
             }
->>>>>>> Stashed changes
+
